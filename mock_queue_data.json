@@ -1,0 +1,35 @@
+{
+  "isAuthenticated": true,
+  "user": {
+    "userID": "e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2",
+    "universityID": "SM-DOC001",
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "role": "doctor",
+    "email": "s.johnson@unilag.edu.ng"
+  },
+  "dashboardStats": {
+    "patientsInQueue": 4,
+    "aiConsultationsToday": 28,
+    "appointmentsToday": 18,
+    "activeEmergencies": 1 
+  }
+}
+
+{
+  "isAuthenticated": true,
+  "user": {
+    "firstName": "David"
+  },
+  "queueStatus": {
+    "queueToken": "R3D4",
+    "triageStatus": "routine",
+    "currentPosition": 4, 
+    "estimatedWaitTimeMinutes": 10,
+    "nextStep": "Please wait for a doctor to initiate E-Consult chat (Phase 2)."
+  },
+  "healthInfo": {
+    "allergies": "None",
+    "bloodType": "O+"
+  }
+}
