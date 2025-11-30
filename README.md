@@ -62,36 +62,198 @@ Although backend was skipped due to time constraints, the project is structured 
 
 # 📌 3. System Architecture
 
-+-----------------------------+
-| React Frontend (Vercel) |
-| - Login |
-| - Dashboard |
-| - Symptoms Triage UI |
-| - Student Records UI |
-+-------------+---------------+
-|
-v
-+--------------------------------------+
-| Flask ML API (Local / Future Cloud) |
-| Endpoint: /predict |
-| Model: DistilBERT-classifier |
-+----------------+---------------------+
-|
-v
-+-----------------------------+
-| PostgreSQL (Planned) |
-| - Student health logs |
-| - Appointments |
-| - Predictions |
-+-----------------------------+
-|
-v
-+-----------------------------+
-| .NG Domain System |
-| - smartmed.ng |
-| - Verified school domains |
-+-----------------------------+
+# SmartMed.ng - AI-Powered School Health Management System
 
+An intelligent health triage and management platform designed for Nigerian schools, combining machine learning diagnostics with comprehensive student health records management.
+
+## 🏗️ System Architecture
+```
++-----------------------------+
+|   React Frontend (Vercel)   |
+|   - Login & Authentication  |
+|   - Dashboard               |
+|   - Symptoms Triage UI      |
+|   - Student Records UI      |
++-------------+---------------+
+              |
+              v
++--------------------------------------+
+|  Flask ML API (Local / Future Cloud) |
+|  Endpoint: /predict                  |
+|  Model: DistilBERT-classifier        |
++----------------+---------------------+
+                 |
+                 v
++-----------------------------+
+|     PostgreSQL (Planned)    |
+|  - Student health logs      |
+|  - Appointments             |
+|  - Predictions              |
++-----------------------------+
+              |
+              v
++-----------------------------+
+|    .NG Domain System        |
+|    - smartmed.ng            |
+|    - Verified school domains|
++-----------------------------+
+```
+
+## ✨ Features
+
+- **AI-Powered Symptom Triage**: DistilBERT-based classifier for preliminary health assessment
+- **Student Health Records**: Comprehensive digital health record management
+- **Dashboard Analytics**: Real-time health metrics and trends
+- **Secure Authentication**: Role-based access control for school staff
+- **Nigerian Context**: Designed specifically for Nigerian school healthcare needs
+
+## 🚀 Tech Stack
+
+### Frontend
+- **Framework**: React
+- **Hosting**: Vercel
+- **UI Components**: [Specify your UI library]
+- **State Management**: [Redux/Context API/etc.]
+
+### Backend
+- **Framework**: Flask (Python)
+- **ML Model**: DistilBERT (Hugging Face Transformers)
+- **API**: RESTful API architecture
+
+### Database (Planned)
+- **Database**: PostgreSQL
+- **ORM**: [SQLAlchemy/etc.]
+
+### Domain
+- **.NG Domain**: smartmed.ng with verified school subdomains
+
+## 📋 Prerequisites
+
+- Node.js (v16+)
+- Python (v3.8+)
+- PostgreSQL (v12+) _(for production)_
+- npm or yarn
+
+## 🛠️ Installation & Setup
+
+### Frontend Setup
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/smartmed-ng.git
+cd smartmed-ng/frontend
+
+# Install dependencies
+npm install
+
+# Create .env file
+cp .env.example .env
+
+# Start development server
+npm run dev
+```
+
+### Backend Setup
+```bash
+# Navigate to backend directory
+cd backend
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run Flask server
+python app.py
+```
+
+## 🔑 Environment Variables
+
+### Frontend (.env)
+```
+REACT_APP_API_URL=http://localhost:5000
+REACT_APP_ENV=development
+```
+
+### Backend (.env)
+```
+FLASK_ENV=development
+DATABASE_URL=postgresql://user:password@localhost/smartmed
+MODEL_PATH=./models/distilbert-classifier
+SECRET_KEY=your-secret-key
+```
+
+## 📡 API Endpoints
+
+### Health Prediction
+```http
+POST /predict
+Content-Type: application/json
+
+{
+  "symptoms": "headache, fever, cough",
+  "student_id": "12345"
+}
+```
+
+### Response
+```json
+{
+  "prediction": "Common Cold",
+  "confidence": 0.87,
+  "recommendations": ["Rest", "Hydration", "Monitor temperature"],
+  "severity": "Low"
+}
+```
+
+## 🗺️ Roadmap
+
+- [x] Frontend UI/UX Design
+- [x] ML Model Development (DistilBERT)
+- [x] Basic Flask API
+- [ ] PostgreSQL Integration
+- [ ] User Authentication & Authorization
+- [ ] Cloud Deployment
+- [ ] School Domain Verification System
+- [ ] Mobile App (Flutter/React Native)
+- [ ] Telemedicine Integration
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Team
+
+- **Your Name** - Lead Developer - [GitHub](https://github.com/yourusername)
+- **Contributors** - [See contributors](https://github.com/yourusername/smartmed-ng/contributors)
+
+## 📧 Contact
+
+For questions or support:
+- Email: support@smartmed.ng
+- Website: [smartmed.ng](https://smartmed.ng)
+- Twitter: [@smartmedng](https://twitter.com/smartmedng)
+
+## 🙏 Acknowledgments
+
+- Hugging Face for DistilBERT model
+- Nigerian schools participating in pilot program
+- [Any other acknowledgments]
+
+---
+
+**Built with ❤️ for Nigerian Schools**
 
 ---
 
@@ -266,5 +428,6 @@ SmartMedNG/
     ├── app.py
     ├── model.pkl (or model.bin)
     ├── requirements.txt
+
 
 
