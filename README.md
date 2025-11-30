@@ -226,11 +226,12 @@ Each school gets:
 Copy code
 schoolName.smart-med.name.ng
 With:
-
-DNSSEC
+TLS
 
 SSL
+“Although DNSSEC is now officially supported by NiRA for the .ng namespace (as announced in 2024–2025), our registrar / DNS hosting provider (WhoGoHost) does not yet offer DNSSEC configuration or DS-record publishing for third-level domains such as .name.ng. We made an intentional decision to preserve stability and correct DNS resolution rather than risk breakage with a partial or unsupported DNSSEC setup.
 
+We believe that the submission of SmartMed NG — a fully functional, security-aware application built on a .ng domain — helps highlight the need for widespread DNSSEC adoption across registrars. With more live .ng projects like ours, registrars and NiRA are more likely to enable and support DNSSEC for end-users, making the entire .ng ecosystem safer and more trustworthy.”
 NiRA verified registry
 
 📱 5. Mobile App & USSD fallback
@@ -267,6 +268,7 @@ Output: dist
 📌 9. Deployment Links
 Live Demo:
 smart-med.name.ng
+
 
 
 
