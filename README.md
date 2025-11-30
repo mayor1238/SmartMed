@@ -268,31 +268,6 @@ Output: dist
 Live Demo:
 smart-med.name.ng
 
-Domain:
-Copy code
-smart-med.name.ng
-📌 10. Repository Structure
-lua
-Copy code
-SmartMedNG/
-│
-├── README.md
-│
-├── frontend/
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── index.html
-│   └── src/
-│       ├── pages/
-│       ├── components/
-│       ├── api/
-│       └── assets/
-│
-└── ml-service/
-    ├── app.py
-    ├── model.pkl (or model.bin)
-    ├── requirements.txt
-
 
 
 
