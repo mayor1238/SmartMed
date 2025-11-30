@@ -45,14 +45,14 @@ Identifies whether symptoms may be:
 Uses a lightweight transformer model (DistilBERT-base).
 
 ### ✔ **Fully NiRA-compliant domain integration**  
-We purchased **smartmed.ng**, serving as our central registry.
+We purchased **smart-med.name.ng**, serving as our central registry.
 
 Future structure:
-unilag.smartmed.ng
-oau.smartmed.ng
-buk.smartmed.ng
-funaab.smartmed.ng
-fuoye.smartmed.ng
+unilag.smart-med.name.ng
+oau.smart-med.name.ng
+buk.smart-med.name.ng
+funaab.smart-med.name.ng
+fuoye.smart-med.name.ng
 
 
 ### ✔ **Backend + PostgreSQL ready system design**  
@@ -113,7 +113,7 @@ v
 - Built functional forms  
 
 ### **Day 4 — Domain & Deployment**
-- Purchased `smartmed.ng`  
+- Purchased `smart-med.name.ng`  
 - Deployed frontend to Vercel  
 - Connected DNS settings  
 
@@ -157,3 +157,112 @@ http://127.0.0.1:5000/predict
 Due to limited data and time constraints, accuracy is modest.
 However, the pipeline works, and the model is fully upgradeable.
 
+📌 6. Future Integrations (Phase 2 & 3)
+SmartMed NG is designed for scalability. After the hackathon, we will implement:
+
+🌱 1. Improved ML Model
+Larger dataset from universities
+
+Model retraining using clinical notes
+
+Migration to cloud inference (HF, Vercel AI, Render)
+
+Advanced models like DeBERTa-v3-small or ClinicalBERT
+
+🧱 2. Full Backend Integration
+FastAPI backend with JWT auth
+
+Protected API gateway
+
+Role-based access control (students, nurses, admin)
+
+🗄️ 3. PostgreSQL Database
+Storing:
+
+Health logs
+
+Predictions
+
+Appointment history
+
+Medical follow-ups
+
+Security features:
+
+AES encryption
+
+VPN/SSL
+
+Local data sovereignty (Nigeria-hosted)
+🌐 4. Domain Deployment for Schools
+Each school gets:
+
+Copy code
+schoolName.smart-med.name.ng
+With:
+
+DNSSEC
+
+SSL
+
+NiRA verified registry
+
+📱 5. Mobile App & USSD fallback
+To reach students without smartphones.
+
+💡 6. ML Feedback System
+Triage accuracy improves automatically as clinic staff confirm cases.
+
+📌 7. How to Run the ML API Locally
+bash
+Copy code
+cd ml-service
+python -m venv venv
+source venv/bin/activate     # or venv\Scripts\activate (Windows)
+pip install -r requirements.txt
+python app.py
+Runs at:
+
+arduino
+Copy code
+http://127.0.0.1:5000/predict
+📌 8. How to Run the Frontend
+bash
+Copy code
+cd frontend
+npm install
+npm run dev
+Vercel Build Settings:
+
+Build: npm run build
+
+Output: dist
+
+📌 9. Deployment Links
+Live Demo:
+smart-med.name.ng
+
+Domain:
+Copy code
+smart-med.name.ng
+📌 10. Repository Structure
+lua
+Copy code
+SmartMedNG/
+│
+├── README.md
+│
+├── frontend/
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── index.html
+│   └── src/
+│       ├── pages/
+│       ├── components/
+│       ├── api/
+│       └── assets/
+│
+└── ml-service/
+    ├── app.py
+    ├── model.pkl (or model.bin)
+    ├── requirements.txt
