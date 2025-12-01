@@ -94,7 +94,7 @@ An intelligent health triage and management platform designed for Nigerian schoo
               v
 +-----------------------------+
 |    .NG Domain System        |
-|    - smartmed.ng            |
+|    - smart-med.name.ng            |
 |    - Verified school domains|
 +-----------------------------+
 ```
@@ -267,7 +267,8 @@ Output: dist
 
 📌 9. Deployment Links
 Live Demo:
-smart-med.name.ng
+
+https://smart-med.name.ng
 
 
 
